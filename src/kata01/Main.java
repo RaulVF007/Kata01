@@ -1,10 +1,15 @@
 package kata01;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Main {
     public static void main(String[] args){
-        Person person = new Person("Raul Vega", new Date(100,1,28)); //A year y is represented by the integer y + 1900;
+        Calendar date;
+        date = GregorianCalendar.getInstance();
+        date.set(2000,2,28);
+        
+        Person person = new Person("Raul Vega", date); 
         System.out.println(person.getName() + " is " + person.getAge() + " years old");
     }
 }
